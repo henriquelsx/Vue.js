@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <title>Self Service Order</title>
+        <title>Pedido - Fast Food</title>
     </head>
 
     <body>
@@ -16,7 +16,7 @@
         <main id="app">
             
             <section  class="items">
-
+                <h4>Escolha Seus Itens</h4>
               
                 <div 
                     v-for="product in products" 
@@ -39,7 +39,7 @@
                 </div>             
             </section>
 
-            <section class="summary">
+            <section class="summary" v-if="total()>0">
                 <strong>Resumo do pedido</strong>
                 <table>
                     <thead>
@@ -59,7 +59,7 @@
                         
                         <tr>
                             <th>Total</th>
-                            <th>5.99</th>
+                            <th>{{ total() }}</th>
                         </tr>
                     </tbody>
                 </table>
