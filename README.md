@@ -1,4 +1,6 @@
 # Vue.js
 I'm really wanting to dominate this framework, check my learning here :-)
 Learning and developing with the framework Vue.js
-![vuejs](https://user-images.githubusercontent.com/79550534/172929356-eb918461-ef83-4f8f-ba07-264ea7f34e7e.png)
+
+![vue](https://user-images.githubusercontent.com/79550534/172936337-aa29d170-e829-4eed-a382-f856035f860e.png)
+![js](https://user-images.githubusercontent.com/79550534/172936350-0c5f6cc3-0313-4334-befc-2f914690c4e3.png)
