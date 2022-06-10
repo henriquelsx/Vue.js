@@ -1,13 +1,13 @@
 members = [
     {
-        fname: 'John',
-        lname: 'Lennon',
-        instrument: 'Violão'
+        fname: 'Kareem',
+        lname: 'Abdul-Jabbar',
+        position: 'Pivô'
     },
     {
-        fname: 'George',
-        lname: 'Harrison',
-        instrument: 'Guitarra'
+        fname: 'Stephen',
+        lname: 'Curry',
+        position: 'Armador'
     }
 ]
 
@@ -15,9 +15,16 @@ const handlingForms = {
 
     data() {
         return {
-            members: window.members
+            members: window.members,
+            newMember: {
+            }
         }
     },
+    methods: {
+        addMember: function(){
+            this.members.push(this.newMember);
+        }
+    }
 
 };
 

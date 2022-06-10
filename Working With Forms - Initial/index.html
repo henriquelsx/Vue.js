@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt_BR">
 
     <head>
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <title>Band Members</title>
+        <title>Time members</title>
     </head>
 
     <body>
@@ -18,7 +18,7 @@
             
 
             <h1>
-                Membros da Banda
+                Time de Basquete
             </h1>
 
             <table>
@@ -26,14 +26,14 @@
                 <tr>
                     <th>Nome</th>
                     <th>Sobrenome</th>
-                    <th>Instrumento</th>
+                    <th>Posição</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr v-for="member in members">
                     <td>{{member.fname}}</td>
                     <td>{{member.lname}}</td>
-                    <td>{{member.instrument}}</td>
+                    <td>{{member.position}}</td>
                 </tr>
                 </tbody>
             </table>
@@ -43,20 +43,20 @@
                 <form>
                 
                 <label for="fname">Nome:</label><br>
-                <input type="text" id="fname" name="fname"><br>
+                <input type="text" id="fname" name="fname" v-model="newMember.fname"><br>
                 
                 <label for="lname">Sobrenome:</label><br>
-                <input type="text" id="lname" name="lname"><br>
+                <input type="text" id="lname" name="lname" v-model="newMember.lname"><br>
 
-                <label for="instrument">Instrumento:</label><br>
-                <select name="instrument" id="instrument">
-                    <option value="Baixo">Baixo</option>
-                    <option value="Guitarra">Guitarra</option>
-                    <option value="Violão">Violão</option>
-                    <option value="Bateria">Bateria</option>
+                <label for="position">Posição:</label><br>
+                <select name="position" id="position" v-model="newMember.position">
+                    <option value="Armador">Armador</option>
+                    <option value="Pivô">Pivô</option>
+                    <option value="Ala">Ala</option>
+                    <option value="Ala-Pivô">Ala-Pivô</option>
                     </select>
                     <br><br>
-                <input type="button" value="Adicionar">
+                <input type="button" value="Adicionar" @click="addMember()">
                 </form> 
             </section>
 
