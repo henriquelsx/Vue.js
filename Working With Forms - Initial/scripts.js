@@ -1,13 +1,11 @@
 members = [
     {
-        fname: 'Kareem',
-        lname: 'Abdul-Jabbar',
-        position: 'Pivô'
+        fname: null,
+        lname: null,
+        position: null
     },
     {
-        fname: 'Stephen',
-        lname: 'Curry',
-        position: 'Armador'
+  
     }
 ]
 
@@ -22,7 +20,13 @@ const handlingForms = {
     },
     methods: {
         addMember: function(){
-            this.members.push(this.newMember);
+            if(this.newMember.fname && this.newMember.lname && this.newMember.position){
+                this.members.push(this.newMember);
+                this.newMember = {};
+            } else {
+                alert("Todos os campos devem ser preenchidos!")
+            }
+            
         }
     }
 
