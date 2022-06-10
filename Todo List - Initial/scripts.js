@@ -1,7 +1,7 @@
 const todosApp = {
     data(){
         return{
-            todos: [window.todos],
+            todos: [],
             newTodo: {
                 done: false
             }
