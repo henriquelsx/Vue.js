@@ -19,7 +19,15 @@ const todosApp = {
                 alert('Insira algo na área em branco')
             }
         }
-    }    
+    },
+    beforeCreate(){
+        console.log(this.todos);
+
+    },
+    created(){
+
+    }
+   
 };
 
 Vue.createApp(todosApp).mount('#app');
