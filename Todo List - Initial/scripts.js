@@ -20,12 +20,9 @@ const todosApp = {
             }
         }
     },
-    beforeCreate(){
-        console.log(this.todos);
 
-    },
     created(){
-
+        this.todos = localStorage.getItem("todos") ? JSON.parse(localStorage("todos")) : this.todos;
     }
    
 };
