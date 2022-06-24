@@ -1,18 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <h1></h1>
+  </div>
+ 
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+export default{
+  name: 'App',
+
+}
+
+//https://opentdb.com/api.php?amount=1&type=multiple
+
 </script>
 
 <style lang="scss">
@@ -22,6 +23,39 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px auto;
+  max-width: 960px;
+
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+input[type='radio']{
+  margin: 12px 4px;
+}
+
+button.send {
+  margin-top: 12px;
+  height: 40px;
+  min-width: 120px;
+  padding: 0 16px;
+  color: #fff;
+  background-color: #1867c0;
+  border: 1px solid #1867c0;
+  cursor: pointer;
+}
+
+section.score {
+  border-bottom: 1px solid black;
+  padding: 24px;
+  font-size: 18px;
+
+  span {
+    padding: 8px;
+    font-weight: bold;
+    border: 1px solid black;
+  }
 }
 </style>
